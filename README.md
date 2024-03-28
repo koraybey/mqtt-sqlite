@@ -11,7 +11,7 @@ Decided to remove this package from [mqtt-dashboard](https://github.com/koraybey
 When container starts, the executable creates the database file from embedded migrations and reads the device configuration. Both of these files are located in ```shared``` folder, whose location are defined in ```.env``` file.
 
 ```shell
-docker build -t mqtt-dashboard .
-docker run -it -v ./shared:/data/shared --entrypoint=/bin/sh  mqtt-dashboard:latest
+docker build -t mqtt-sqlite .
+docker run -it -v ./shared:/data/shared mqtt-sqlite:latest
 ```
 
